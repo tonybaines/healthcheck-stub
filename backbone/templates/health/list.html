@@ -1,5 +1,10 @@
-<ul>
-  <% _.each(componentHealthStatuses, function(componentHealthStatus){ %>
-   <li>Component ID <%= componentHealthStatus.get("id") %></li>
+<table cellpadding="10">
+    <tr><th>Component ID</th><th>Level</th><th>Reason</th></tr>
+  <% _.each(componentHealthStatuses, function(status){ %>
+    <tr>
+        <td><%= status.get("id") %></td>
+        <td><%= status.get("status")["level"] %></td>
+        <td><%= status.get("status")["message"] %></td>
+    </tr>
   <% }); %>
-</ul>
+</table>
