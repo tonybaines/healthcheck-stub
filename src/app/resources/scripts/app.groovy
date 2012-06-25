@@ -28,3 +28,16 @@ get("/info") {
     {"id": "2", "name" : "Component B", "version": "1.0.1-SNAPSHOT", "properties": {"dbdeploy-changelog-number" : "37", "db-sid": "bistromath", "db-user": "slartibartfast"} }
 ]"""
 }
+
+get("/component/1") {
+    setHeader("Access-Control-Allow-Origin", "*");
+    setHeader("Access-Control-Allow-Headers", "X-Requested-With");
+    setHeader("Content-Type", "application/json")
+    """{"id": "1", "name" : "Magrathea"}"""
+}
+get("/component/2") {
+    setHeader("Access-Control-Allow-Origin", "*");
+    setHeader("Access-Control-Allow-Headers", "X-Requested-With");
+    setHeader("Content-Type", "application/json")
+    """{"id": "2", "name" : "Ursa Minor Beta"}"""
+}
