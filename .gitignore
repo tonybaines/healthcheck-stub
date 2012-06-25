@@ -1,10 +1,11 @@
-.classpath
-.settings/
-.project
-.gradle
-build/
 bin/
+build/
+.classpath
+.gradle
+gradle.properties
+.idea/workspace.xml
 *.iml
 *.ipr
 *.iws
-gradle.properties
+.project
+.settings/
