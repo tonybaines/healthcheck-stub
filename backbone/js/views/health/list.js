@@ -1,4 +1,3 @@
-// Filename: views/health/list
 define([
   'jquery',
   'underscore',
@@ -9,17 +8,14 @@ define([
   var healthListView = Backbone.View.extend({
     el: $("#content"),
     render: function(){
-      console.log('Rendering');
       var that = this;
       var statuses = new HealthStatuses();
       statuses.fetch({
         success: function(statuses) {
-          console.log('fetched');
           $(that.el).html(_.template(healthListTemplate, {componentHealthStatuses: statuses.models, _:_}));
         },
         error: function() {
           console.log('Error handler :-(');
-          console.log(arguments);
         }
       });
     }

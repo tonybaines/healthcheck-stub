@@ -1,0 +1,6 @@
+<% _.each(instanceStatsList, function(stats){ %>
+<ul>
+    <li>Component <%= stats.get("id") %> is running with a throughput rate of
+    <%= stats.get("stats")["Throughput"] %> transactions per second and <%= stats.get("stats")["Timeouts"] %> timeouts in the last 5 minutes</li>
+</ul>
+<% }); %>

@@ -2,6 +2,6 @@ define([
   'underscore',
   'backbone'
 ], function(_, Backbone) {
-  var Health = Backbone.Model.extend({ });
-  return Health;
+  var Stats = Backbone.Model.extend({ });
+  return Stats;
 });

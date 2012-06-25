@@ -1,0 +1,14 @@
+<% _.each(instanceInfoList, function(info){ %>
+<ul>
+    <li>Component <%= info.get("id") %> (<%= info.get("name") %>):
+        <ul>
+            <li>Version: <%= info.get("version") %></li>
+            <ul>
+                <% _.each(info.get("properties"), function(value, key){ %>
+                <li><%= key %> = <%= value %></li>
+                <% });%>
+            </ul>
+        </ul>
+    </li>
+</ul>
+<% }); %>
